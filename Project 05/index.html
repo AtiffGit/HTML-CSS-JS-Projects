@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+    <!-- ----Header section ----- -->
+    <header>
+        <a href="#" class="logo"><img src="image/logo.png" alt=""></a>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#team">Team</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#blog">Blog</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!-- ----Header section ----- -->
+
+    <div class="home" id="home">
+        <div class=" swipper home-slider">
+            <div class="swipper-wrapper wrapper">
+                <div class=" swipper-slide slide slide1">
+                    <div class="content">
+                        <img src="image/crown-symbol.png" alt="">
+                        <h3>Delicious Royate</h3>
+                        <h1>Gift Voucher</h1>
+                        <p>Give Away Your Beloved Customers</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="swipper-slide slide slide2">
+                    <div class="content">
+                        <img src="image/crown-symbol.png" alt="">
+                        <h3>Sale of 10% This Dish</h3>
+                        <h1>The Fresh</h1>
+                        <p>Food Resturant</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                </div>
+
+                <div class="swipper-slide slide slide3">
+                    <div class="content">
+                        <img src="image/crown-symbol.png" alt="">
+                        <h3>We Are Open</h3>
+                        <h1>Fresh Fruits</h1>
+                        <p>You Will it</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <section class="welcome" id="about">
+        <h1 class="heading">WELCOME TO ROYATE</h1>
+        <center><h3 class="sub-heading"> ~ Luxury & Quality ~ </h3></center>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="image/post-thumb-1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var swiper = new Swiper(".home-slider", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 7500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          loop:true,
+        });
+      </script>
+
+    <script class="text/javascript">
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+
+        menu.onclick = () =>{
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+
+
+
+</body>
+</html>
